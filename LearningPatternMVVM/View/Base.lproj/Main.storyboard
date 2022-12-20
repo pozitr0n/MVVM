@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Llz-C7-DY4">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mvvm View-->
+        <scene sceneID="GsL-zD-Yju">
+            <objects>
+                <viewController id="Llz-C7-DY4" customClass="MvvmView" customModule="LearningPatternMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G8h-16-Sfu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rB3-pk-fLZ">
+                                <rect key="frame" x="96.666666666666686" y="338.66666666666669" width="200" height="200.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ZjE-Sb-KW2"/>
+                                    <constraint firstAttribute="width" constant="200" id="o8A-ge-XyL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKK-rG-74i">
+                                <rect key="frame" x="16" y="588" width="159" height="55"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show first image">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showFirstImageBtnPressed:" destination="Llz-C7-DY4" eventType="touchUpInside" id="uPO-No-H9K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3o-Wh-NAY">
+                                <rect key="frame" x="218" y="588" width="159" height="55"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show second Image">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showSecondImageBtnPressed:" destination="Llz-C7-DY4" eventType="touchUpInside" id="Mqe-Nc-Ax3"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="11A-ci-WmG">
+                                <rect key="frame" x="171.66666666666666" y="413.66666666666669" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uLa-Vb-MNR"/>
+                                    <constraint firstAttribute="width" constant="50" id="zvK-yo-tZW"/>
+                                </constraints>
+                                <color key="color" systemColor="systemBlueColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XED-WP-bz4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o3o-Wh-NAY" firstAttribute="top" secondItem="rB3-pk-fLZ" secondAttribute="bottom" constant="49.333333333333258" id="BLA-Vz-X6v"/>
+                            <constraint firstItem="11A-ci-WmG" firstAttribute="centerY" secondItem="rB3-pk-fLZ" secondAttribute="centerY" id="FBq-cc-lSZ"/>
+                            <constraint firstItem="XED-WP-bz4" firstAttribute="bottom" secondItem="o3o-Wh-NAY" secondAttribute="bottom" constant="175" id="N0c-9f-erA"/>
+                            <constraint firstItem="rB3-pk-fLZ" firstAttribute="centerY" secondItem="XED-WP-bz4" secondAttribute="centerY" id="PFk-fN-DIi"/>
+                            <constraint firstItem="rB3-pk-fLZ" firstAttribute="centerX" secondItem="XED-WP-bz4" secondAttribute="centerX" id="QdH-ow-FfY"/>
+                            <constraint firstItem="XED-WP-bz4" firstAttribute="trailing" secondItem="o3o-Wh-NAY" secondAttribute="trailing" constant="16" id="Wgg-xm-PR1"/>
+                            <constraint firstItem="zKK-rG-74i" firstAttribute="top" secondItem="rB3-pk-fLZ" secondAttribute="bottom" constant="49.333333333333258" id="XaD-QZ-ERm"/>
+                            <constraint firstItem="zKK-rG-74i" firstAttribute="leading" secondItem="XED-WP-bz4" secondAttribute="leading" constant="16" id="kKl-7R-lk3"/>
+                            <constraint firstItem="11A-ci-WmG" firstAttribute="centerX" secondItem="rB3-pk-fLZ" secondAttribute="centerX" id="nTR-9U-PJl"/>
+                            <constraint firstItem="XED-WP-bz4" firstAttribute="bottom" secondItem="zKK-rG-74i" secondAttribute="bottom" constant="175" id="pdh-ck-qAt"/>
+                            <constraint firstItem="o3o-Wh-NAY" firstAttribute="leading" secondItem="zKK-rG-74i" secondAttribute="trailing" constant="43" id="w7Y-hL-Uxb"/>
+                            <constraint firstItem="XED-WP-bz4" firstAttribute="trailing" secondItem="zKK-rG-74i" secondAttribute="trailing" constant="218" id="xaK-yC-dV0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="11A-ci-WmG" id="qBu-xN-Mbv"/>
+                        <outlet property="imageView" destination="rB3-pk-fLZ" id="RAg-XO-uYZ"/>
+                        <outlet property="showFirstImageBtn" destination="zKK-rG-74i" id="Bda-rV-VQ6"/>
+                        <outlet property="showSecondImageBtn" destination="o3o-Wh-NAY" id="DLj-pR-14P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qvk-0T-7yS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-109.16030534351144" y="-26.056338028169016"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
